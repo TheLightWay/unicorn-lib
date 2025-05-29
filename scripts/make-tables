@@ -176,8 +176,15 @@ class EnumUcdRecord:
 script_code_names = {}
 script_name_codes = {}
 
-script_pattern = re.compile(r'\s+<tr>'
-    + r'\s*<td[^<>]*>([^<>]*)</td>'         # Code
+#script_pattern = re.compile(r'\s+<tr>'
+#    + r'\s*<td[^<>]*>([^<>]*)</td>'         # Code
+#    + r'\s*<td[^<>]*>([^<>]*)</td>'         # Number
+#    + r'\s*<td[^<>]*>([^<>]*)</td>'         # English name
+#    + r'\s*<td[^<>]*>([^<>]*)</td>'         # Nom français
+#    + r'\s*<td[^<>]*>([^<>]*)</td>'         # Property value alias
+#    + r'\s*<td[^<>]*>([^<>]*)(?:</td>|$)',  # Date
+#    re.IGNORECASE)
+script_pattern = re.compile(r'\s*<tr><td[^<>]*>([^<>]*)</td>'         # Code
     + r'\s*<td[^<>]*>([^<>]*)</td>'         # Number
     + r'\s*<td[^<>]*>([^<>]*)</td>'         # English name
     + r'\s*<td[^<>]*>([^<>]*)</td>'         # Nom français
