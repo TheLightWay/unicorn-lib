@@ -4,3 +4,4 @@ ucd-extra
 *.stackdump
 *.zip
 __*
+/.vscode
